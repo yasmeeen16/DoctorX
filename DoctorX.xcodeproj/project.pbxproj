@@ -1,0 +1,1049 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4305AC2822C29B1400229670 /* clinicAppointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305AC2722C29B1400229670 /* clinicAppointment.swift */; };
+		4305AC2A22C29C2B00229670 /* AppointmentClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305AC2922C29C2B00229670 /* AppointmentClinicCell.swift */; };
+		430BD3B622C21F7F007ABDA0 /* AddApointments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430BD3B522C21F7F007ABDA0 /* AddApointments.swift */; };
+		430BD3B822C24868007ABDA0 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430BD3B722C24868007ABDA0 /* Appointment.swift */; };
+		430BD3BA22C249A7007ABDA0 /* shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430BD3B922C249A7007ABDA0 /* shift.swift */; };
+		430BD3BC22C24ACF007ABDA0 /* AppointmentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430BD3BB22C24ACF007ABDA0 /* AppointmentDAO.swift */; };
+		430CF78E22C0C4A300124A71 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430CF78D22C0C4A300124A71 /* EditProfile.swift */; };
+		430CF79022C0CE3F00124A71 /* AddClinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430CF78F22C0CE3F00124A71 /* AddClinic.swift */; };
+		430CF79222C0CE5D00124A71 /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430CF79122C0CE5D00124A71 /* Clinic.swift */; };
+		430CF79422C0CE6D00124A71 /* ClinicDAOImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430CF79322C0CE6D00124A71 /* ClinicDAOImp.swift */; };
+		430CF79622C0D8D800124A71 /* editClinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430CF79522C0D8D800124A71 /* editClinic.swift */; };
+		430D04DA22BFB5710049FB09 /* Registraion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430D04D922BFB5710049FB09 /* Registraion.swift */; };
+		430D04DE22BFB95D0049FB09 /* UserDAOImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430D04DD22BFB95D0049FB09 /* UserDAOImp.swift */; };
+		434B0A45229F288B007E52BB /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434B0A44229F288B007E52BB /* login.swift */; };
+		4380C5DE22AD911A0045D51A /* DocAppointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4380C5DD22AD911A0045D51A /* DocAppointment.swift */; };
+		4380C5E022AD914A0045D51A /* docAppointmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4380C5DF22AD914A0045D51A /* docAppointmentCell.swift */; };
+		4380C5E222AD94FE0045D51A /* settingDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4380C5E122AD94FE0045D51A /* settingDoc.swift */; };
+		4380C5E422AD95430045D51A /* settingNurse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4380C5E322AD95430045D51A /* settingNurse.swift */; };
+		4380C5E622AD97840045D51A /* EditDeleteNurse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4380C5E522AD97840045D51A /* EditDeleteNurse.swift */; };
+		4380C5E822AD98360045D51A /* EditDeleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4380C5E722AD98360045D51A /* EditDeleteCell.swift */; };
+		43838A9E22ACF34C0088D191 /* home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43838A9D22ACF34C0088D191 /* home.swift */; };
+		43838AA022AD062D0088D191 /* ClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43838A9F22AD062D0088D191 /* ClinicCell.swift */; };
+		43838AA222AD17F00088D191 /* notificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43838AA122AD17F00088D191 /* notificationCell.swift */; };
+		43838AA422AD19F70088D191 /* notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43838AA322AD19F70088D191 /* notifications.swift */; };
+		43838AA622AD25A60088D191 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43838AA522AD25A60088D191 /* GoogleService-Info.plist */; };
+		43838AA922AD27A60088D191 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43838AA822AD27A60088D191 /* User.swift */; };
+		4392C86C22C2609D0036D495 /* Clinics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392C86B22C2609D0036D495 /* Clinics.swift */; };
+		4392C86E22C260D40036D495 /* clinicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392C86D22C260D40036D495 /* clinicsCell.swift */; };
+		43A8B440229E8B1800A3D3D5 /* bookAppointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A8B43F229E8B1800A3D3D5 /* bookAppointment.swift */; };
+		43A8B442229E8D6900A3D3D5 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A8B441229E8D6900A3D3D5 /* extension.swift */; };
+		43A8B444229E9F9000A3D3D5 /* AppointmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A8B443229E9F9000A3D3D5 /* AppointmentType.swift */; };
+		43A8B447229EA38D00A3D3D5 /* patientReg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A8B446229EA38D00A3D3D5 /* patientReg.swift */; };
+		43A8B44A229EB9D900A3D3D5 /* timeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A8B449229EB9D900A3D3D5 /* timeCell.swift */; };
+		43ABC5EA229F0F0B00710DCB /* changePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ABC5E9229F0F0B00710DCB /* changePass.swift */; };
+		43ABC5EC229F12E700710DCB /* setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ABC5EB229F12E700710DCB /* setting.swift */; };
+		43D5B362229D5FB7009A04B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B361229D5FB7009A04B6 /* AppDelegate.swift */; };
+		43D5B364229D5FB7009A04B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B363229D5FB7009A04B6 /* ViewController.swift */; };
+		43D5B367229D5FB7009A04B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D5B365229D5FB7009A04B6 /* Main.storyboard */; };
+		43D5B369229D5FB8009A04B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D5B368229D5FB8009A04B6 /* Assets.xcassets */; };
+		43D5B36C229D5FB8009A04B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D5B36A229D5FB8009A04B6 /* LaunchScreen.storyboard */; };
+		43D5B377229D5FB8009A04B6 /* DoctorXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B376229D5FB8009A04B6 /* DoctorXTests.swift */; };
+		43D5B382229D5FB8009A04B6 /* DoctorXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B381229D5FB8009A04B6 /* DoctorXUITests.swift */; };
+		5D01728322D4EF4800716E8C /* ReservationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01728222D4EF4800716E8C /* ReservationDAO.swift */; };
+		5D01728522D4FD9C00716E8C /* AppointmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01728422D4FD9C00716E8C /* AppointmentCell.swift */; };
+		5D01728722D4FEBD00716E8C /* AppointmentsReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01728622D4FEBD00716E8C /* AppointmentsReservation.swift */; };
+		5D01728922D505E700716E8C /* patiantAppointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01728822D505E700716E8C /* patiantAppointment.swift */; };
+		5D01728B22D58FC000716E8C /* Nurse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01728A22D58FC000716E8C /* Nurse.swift */; };
+		5D01728E22D592BD00716E8C /* AddNurse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01728D22D592BD00716E8C /* AddNurse.swift */; };
+		5D01729022D5A31300716E8C /* NurseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01728F22D5A31300716E8C /* NurseList.swift */; };
+		5D01729322D5A39E00716E8C /* nursecell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01729222D5A39E00716E8C /* nursecell.swift */; };
+		5D044B0722E5B89D005B4531 /* ReservationTypeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D044B0622E5B89D005B4531 /* ReservationTypeList.swift */; };
+		5D044B0922E5B93B005B4531 /* ReservationTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D044B0822E5B93B005B4531 /* ReservationTypeCell.swift */; };
+		5D044B0B22E5D534005B4531 /* EditReservationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D044B0A22E5D534005B4531 /* EditReservationType.swift */; };
+		5D044B0D22E5E5FE005B4531 /* PatiantReservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D044B0C22E5E5FE005B4531 /* PatiantReservationCell.swift */; };
+		5D0C6ACD22D9D447002F32BD /* editNurseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C6ACC22D9D447002F32BD /* editNurseData.swift */; };
+		5D0C6ACF22D9EE28002F32BD /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C6ACE22D9EE28002F32BD /* Validation.swift */; };
+		5D3602F722DB422300EE5BAB /* MainForNurse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3602F622DB422300EE5BAB /* MainForNurse.swift */; };
+		5D3602FB22DB894D00EE5BAB /* NursesDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3602FA22DB894D00EE5BAB /* NursesDB.swift */; };
+		5D3602FD22DC783400EE5BAB /* NurseHome2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3602FC22DC783400EE5BAB /* NurseHome2.swift */; };
+		5D3602FF22DC7A8F00EE5BAB /* NurseMoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3602FE22DC7A8F00EE5BAB /* NurseMoreVC.swift */; };
+		5D36030122DC885C00EE5BAB /* NurseReservationStep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D36030022DC885C00EE5BAB /* NurseReservationStep1.swift */; };
+		5D36030322DC997300EE5BAB /* NurseReservationStep2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D36030222DC997300EE5BAB /* NurseReservationStep2.swift */; };
+		5D36030722DCB98200EE5BAB /* NurseToDayReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D36030622DCB98200EE5BAB /* NurseToDayReservation.swift */; };
+		5D36034322DDC21C00EE5BAB /* NurseRequestsForReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D36034222DDC21C00EE5BAB /* NurseRequestsForReservation.swift */; };
+		5D36034522DDDA5E00EE5BAB /* NurseReservationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D36034422DDDA5E00EE5BAB /* NurseReservationRequest.swift */; };
+		5D36034722DDF81700EE5BAB /* NurseConfirmedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D36034622DDF81700EE5BAB /* NurseConfirmedCell.swift */; };
+		5D39E5E522DB303E002D60B1 /* NurseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D39E5E422DB303E002D60B1 /* NurseLogin.swift */; };
+		5D835BEE22E4C5100012B9CE /* AddReservationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D835BED22E4C50F0012B9CE /* AddReservationType.swift */; };
+		5D835BF022E5A8CB0012B9CE /* ReservationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D835BEF22E5A8CB0012B9CE /* ReservationTypes.swift */; };
+		5D835BF222E5AB180012B9CE /* ReservationTypeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D835BF122E5AB180012B9CE /* ReservationTypeDAO.swift */; };
+		5D83C15322D2ECA200936711 /* PatiantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83C15222D2ECA200936711 /* PatiantData.swift */; };
+		5D93541F230801B50015850E /* top5forNurse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93541E230801B50015850E /* top5forNurse.swift */; };
+		5D935421230827420015850E /* homeDoctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D935420230827420015850E /* homeDoctor.swift */; };
+		5DE768B522D2FBC0008ADDB9 /* NurseHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE768B422D2FBC0008ADDB9 /* NurseHome.swift */; };
+		5DE768BA22D3055E008ADDB9 /* NClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE768B922D3055E008ADDB9 /* NClinicCell.swift */; };
+		BAB74653BFD507B22BCA5EC1 /* Pods_DoctorXUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3884483CE0FAD5B0FE2F08FF /* Pods_DoctorXUITests.framework */; };
+		C8A608373987F687B10F2271 /* Pods_DoctorX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E26EFCB12A49B199EF22C61 /* Pods_DoctorX.framework */; };
+		DFD45DAE01F0D243C2254DC7 /* Pods_DoctorXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC132912EF518C2D274D8D8 /* Pods_DoctorXTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43D5B373229D5FB8009A04B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43D5B356229D5FB7009A04B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43D5B35D229D5FB7009A04B6;
+			remoteInfo = DoctorX;
+		};
+		43D5B37E229D5FB8009A04B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43D5B356229D5FB7009A04B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43D5B35D229D5FB7009A04B6;
+			remoteInfo = DoctorX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01EC644CD9A40F6402C5007E /* Pods-DoctorXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorXTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorXTests/Pods-DoctorXTests.release.xcconfig"; sourceTree = "<group>"; };
+		1E264D9364EB2A49351A3210 /* Pods-DoctorX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorX.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorX/Pods-DoctorX.release.xcconfig"; sourceTree = "<group>"; };
+		26482AFB3A0350A7DD825BF8 /* Pods-DoctorXUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorXUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorXUITests/Pods-DoctorXUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3884483CE0FAD5B0FE2F08FF /* Pods_DoctorXUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorXUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4305AC2722C29B1400229670 /* clinicAppointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clinicAppointment.swift; sourceTree = "<group>"; };
+		4305AC2922C29C2B00229670 /* AppointmentClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentClinicCell.swift; sourceTree = "<group>"; };
+		430BD3B522C21F7F007ABDA0 /* AddApointments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddApointments.swift; sourceTree = "<group>"; };
+		430BD3B722C24868007ABDA0 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		430BD3B922C249A7007ABDA0 /* shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shift.swift; sourceTree = "<group>"; };
+		430BD3BB22C24ACF007ABDA0 /* AppointmentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDAO.swift; sourceTree = "<group>"; };
+		430CF78D22C0C4A300124A71 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
+		430CF78F22C0CE3F00124A71 /* AddClinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClinic.swift; sourceTree = "<group>"; };
+		430CF79122C0CE5D00124A71 /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
+		430CF79322C0CE6D00124A71 /* ClinicDAOImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDAOImp.swift; sourceTree = "<group>"; };
+		430CF79522C0D8D800124A71 /* editClinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editClinic.swift; sourceTree = "<group>"; };
+		430D04D922BFB5710049FB09 /* Registraion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registraion.swift; sourceTree = "<group>"; };
+		430D04DD22BFB95D0049FB09 /* UserDAOImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAOImp.swift; sourceTree = "<group>"; };
+		434B0A44229F288B007E52BB /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
+		4380C5DD22AD911A0045D51A /* DocAppointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocAppointment.swift; sourceTree = "<group>"; };
+		4380C5DF22AD914A0045D51A /* docAppointmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = docAppointmentCell.swift; sourceTree = "<group>"; };
+		4380C5E122AD94FE0045D51A /* settingDoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingDoc.swift; sourceTree = "<group>"; };
+		4380C5E322AD95430045D51A /* settingNurse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingNurse.swift; sourceTree = "<group>"; };
+		4380C5E522AD97840045D51A /* EditDeleteNurse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeleteNurse.swift; sourceTree = "<group>"; };
+		4380C5E722AD98360045D51A /* EditDeleteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeleteCell.swift; sourceTree = "<group>"; };
+		43838A9D22ACF34C0088D191 /* home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home.swift; sourceTree = "<group>"; };
+		43838A9F22AD062D0088D191 /* ClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicCell.swift; sourceTree = "<group>"; };
+		43838AA122AD17F00088D191 /* notificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationCell.swift; sourceTree = "<group>"; };
+		43838AA322AD19F70088D191 /* notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notifications.swift; sourceTree = "<group>"; };
+		43838AA522AD25A60088D191 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		43838AA822AD27A60088D191 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4392C86B22C2609D0036D495 /* Clinics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinics.swift; sourceTree = "<group>"; };
+		4392C86D22C260D40036D495 /* clinicsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clinicsCell.swift; sourceTree = "<group>"; };
+		43A8B43F229E8B1800A3D3D5 /* bookAppointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookAppointment.swift; sourceTree = "<group>"; };
+		43A8B441229E8D6900A3D3D5 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		43A8B443229E9F9000A3D3D5 /* AppointmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentType.swift; sourceTree = "<group>"; };
+		43A8B446229EA38D00A3D3D5 /* patientReg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientReg.swift; sourceTree = "<group>"; };
+		43A8B449229EB9D900A3D3D5 /* timeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeCell.swift; sourceTree = "<group>"; };
+		43ABC5E9229F0F0B00710DCB /* changePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePass.swift; sourceTree = "<group>"; };
+		43ABC5EB229F12E700710DCB /* setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setting.swift; sourceTree = "<group>"; };
+		43D5B35E229D5FB7009A04B6 /* DoctorX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctorX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D5B361229D5FB7009A04B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		43D5B363229D5FB7009A04B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		43D5B366229D5FB7009A04B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		43D5B368229D5FB8009A04B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43D5B36B229D5FB8009A04B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		43D5B36D229D5FB8009A04B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43D5B372229D5FB8009A04B6 /* DoctorXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoctorXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D5B376229D5FB8009A04B6 /* DoctorXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorXTests.swift; sourceTree = "<group>"; };
+		43D5B378229D5FB8009A04B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43D5B37D229D5FB8009A04B6 /* DoctorXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoctorXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D5B381229D5FB8009A04B6 /* DoctorXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorXUITests.swift; sourceTree = "<group>"; };
+		43D5B383229D5FB8009A04B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E26EFCB12A49B199EF22C61 /* Pods_DoctorX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D01728222D4EF4800716E8C /* ReservationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDAO.swift; sourceTree = "<group>"; };
+		5D01728422D4FD9C00716E8C /* AppointmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentCell.swift; sourceTree = "<group>"; };
+		5D01728622D4FEBD00716E8C /* AppointmentsReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsReservation.swift; sourceTree = "<group>"; };
+		5D01728822D505E700716E8C /* patiantAppointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patiantAppointment.swift; sourceTree = "<group>"; };
+		5D01728A22D58FC000716E8C /* Nurse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nurse.swift; sourceTree = "<group>"; };
+		5D01728D22D592BD00716E8C /* AddNurse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNurse.swift; sourceTree = "<group>"; };
+		5D01728F22D5A31300716E8C /* NurseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseList.swift; sourceTree = "<group>"; };
+		5D01729222D5A39E00716E8C /* nursecell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nursecell.swift; sourceTree = "<group>"; };
+		5D044B0622E5B89D005B4531 /* ReservationTypeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTypeList.swift; sourceTree = "<group>"; };
+		5D044B0822E5B93B005B4531 /* ReservationTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTypeCell.swift; sourceTree = "<group>"; };
+		5D044B0A22E5D534005B4531 /* EditReservationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReservationType.swift; sourceTree = "<group>"; };
+		5D044B0C22E5E5FE005B4531 /* PatiantReservationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatiantReservationCell.swift; sourceTree = "<group>"; };
+		5D0C6ACC22D9D447002F32BD /* editNurseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editNurseData.swift; sourceTree = "<group>"; };
+		5D0C6ACE22D9EE28002F32BD /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		5D3602F622DB422300EE5BAB /* MainForNurse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainForNurse.swift; sourceTree = "<group>"; };
+		5D3602FA22DB894D00EE5BAB /* NursesDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NursesDB.swift; sourceTree = "<group>"; };
+		5D3602FC22DC783400EE5BAB /* NurseHome2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseHome2.swift; sourceTree = "<group>"; };
+		5D3602FE22DC7A8F00EE5BAB /* NurseMoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseMoreVC.swift; sourceTree = "<group>"; };
+		5D36030022DC885C00EE5BAB /* NurseReservationStep1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseReservationStep1.swift; sourceTree = "<group>"; };
+		5D36030222DC997300EE5BAB /* NurseReservationStep2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseReservationStep2.swift; sourceTree = "<group>"; };
+		5D36030622DCB98200EE5BAB /* NurseToDayReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseToDayReservation.swift; sourceTree = "<group>"; };
+		5D36034222DDC21C00EE5BAB /* NurseRequestsForReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseRequestsForReservation.swift; sourceTree = "<group>"; };
+		5D36034422DDDA5E00EE5BAB /* NurseReservationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseReservationRequest.swift; sourceTree = "<group>"; };
+		5D36034622DDF81700EE5BAB /* NurseConfirmedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseConfirmedCell.swift; sourceTree = "<group>"; };
+		5D39E5E422DB303E002D60B1 /* NurseLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseLogin.swift; sourceTree = "<group>"; };
+		5D835BED22E4C50F0012B9CE /* AddReservationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReservationType.swift; sourceTree = "<group>"; };
+		5D835BEF22E5A8CB0012B9CE /* ReservationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTypes.swift; sourceTree = "<group>"; };
+		5D835BF122E5AB180012B9CE /* ReservationTypeDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTypeDAO.swift; sourceTree = "<group>"; };
+		5D83C15222D2ECA200936711 /* PatiantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatiantData.swift; sourceTree = "<group>"; };
+		5D93541E230801B50015850E /* top5forNurse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = top5forNurse.swift; sourceTree = "<group>"; };
+		5D935420230827420015850E /* homeDoctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeDoctor.swift; sourceTree = "<group>"; };
+		5DE768B422D2FBC0008ADDB9 /* NurseHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseHome.swift; sourceTree = "<group>"; };
+		5DE768B922D3055E008ADDB9 /* NClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NClinicCell.swift; sourceTree = "<group>"; };
+		7EB48D93091A105F487206DA /* Pods-DoctorXUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorXUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorXUITests/Pods-DoctorXUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9A72EB1287D615B2AC15B528 /* Pods-DoctorX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorX/Pods-DoctorX.debug.xcconfig"; sourceTree = "<group>"; };
+		E2C2BC9CCC39125E9DD3D089 /* Pods-DoctorXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorXTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorXTests/Pods-DoctorXTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EAC132912EF518C2D274D8D8 /* Pods_DoctorXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorXTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43D5B35B229D5FB7009A04B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8A608373987F687B10F2271 /* Pods_DoctorX.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D5B36F229D5FB8009A04B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFD45DAE01F0D243C2254DC7 /* Pods_DoctorXTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D5B37A229D5FB8009A04B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAB74653BFD507B22BCA5EC1 /* Pods_DoctorXUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A2FA6CE3AFA4C649F2E52E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A72EB1287D615B2AC15B528 /* Pods-DoctorX.debug.xcconfig */,
+				1E264D9364EB2A49351A3210 /* Pods-DoctorX.release.xcconfig */,
+				E2C2BC9CCC39125E9DD3D089 /* Pods-DoctorXTests.debug.xcconfig */,
+				01EC644CD9A40F6402C5007E /* Pods-DoctorXTests.release.xcconfig */,
+				26482AFB3A0350A7DD825BF8 /* Pods-DoctorXUITests.debug.xcconfig */,
+				7EB48D93091A105F487206DA /* Pods-DoctorXUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		430D04DB22BFB9350049FB09 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				43838AA822AD27A60088D191 /* User.swift */,
+				430CF79122C0CE5D00124A71 /* Clinic.swift */,
+				430BD3B722C24868007ABDA0 /* Appointment.swift */,
+				430BD3B922C249A7007ABDA0 /* shift.swift */,
+				5D83C15222D2ECA200936711 /* PatiantData.swift */,
+				5D01728822D505E700716E8C /* patiantAppointment.swift */,
+				5D01728A22D58FC000716E8C /* Nurse.swift */,
+				5D835BEF22E5A8CB0012B9CE /* ReservationTypes.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		430D04DC22BFB9410049FB09 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				430D04DD22BFB95D0049FB09 /* UserDAOImp.swift */,
+				430CF79322C0CE6D00124A71 /* ClinicDAOImp.swift */,
+				430BD3BB22C24ACF007ABDA0 /* AppointmentDAO.swift */,
+				5D01728222D4EF4800716E8C /* ReservationDAO.swift */,
+				5D3602FA22DB894D00EE5BAB /* NursesDB.swift */,
+				5D835BF122E5AB180012B9CE /* ReservationTypeDAO.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		43838AA722AD278E0088D191 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				430D04DC22BFB9410049FB09 /* DAO */,
+				430D04DB22BFB9350049FB09 /* entity */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		43A8B445229E9F9600A3D3D5 /* control */ = {
+			isa = PBXGroup;
+			children = (
+				5D01728C22D592A000716E8C /* Doctor */,
+				5DE768B322D2FB4B008ADDB9 /* ForNurse */,
+				43D5B363229D5FB7009A04B6 /* ViewController.swift */,
+				43A8B443229E9F9000A3D3D5 /* AppointmentType.swift */,
+				43A8B43F229E8B1800A3D3D5 /* bookAppointment.swift */,
+				43A8B446229EA38D00A3D3D5 /* patientReg.swift */,
+				43ABC5E9229F0F0B00710DCB /* changePass.swift */,
+				43ABC5EB229F12E700710DCB /* setting.swift */,
+				434B0A44229F288B007E52BB /* login.swift */,
+				430D04D922BFB5710049FB09 /* Registraion.swift */,
+				43838A9D22ACF34C0088D191 /* home.swift */,
+				43838AA322AD19F70088D191 /* notifications.swift */,
+				4380C5DD22AD911A0045D51A /* DocAppointment.swift */,
+				4380C5E122AD94FE0045D51A /* settingDoc.swift */,
+				4380C5E322AD95430045D51A /* settingNurse.swift */,
+				4380C5E522AD97840045D51A /* EditDeleteNurse.swift */,
+				430CF78D22C0C4A300124A71 /* EditProfile.swift */,
+				430CF78F22C0CE3F00124A71 /* AddClinic.swift */,
+				430CF79522C0D8D800124A71 /* editClinic.swift */,
+				4392C86B22C2609D0036D495 /* Clinics.swift */,
+				430BD3B522C21F7F007ABDA0 /* AddApointments.swift */,
+				4305AC2722C29B1400229670 /* clinicAppointment.swift */,
+				5D01728622D4FEBD00716E8C /* AppointmentsReservation.swift */,
+			);
+			path = control;
+			sourceTree = "<group>";
+		};
+		43A8B448229EB9C900A3D3D5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5D01729122D5A38100716E8C /* Doctor */,
+				5DE768B622D304C8008ADDB9 /* NurseView */,
+				43A8B449229EB9D900A3D3D5 /* timeCell.swift */,
+				43838A9F22AD062D0088D191 /* ClinicCell.swift */,
+				43838AA122AD17F00088D191 /* notificationCell.swift */,
+				4380C5DF22AD914A0045D51A /* docAppointmentCell.swift */,
+				4380C5E722AD98360045D51A /* EditDeleteCell.swift */,
+				4392C86D22C260D40036D495 /* clinicsCell.swift */,
+				4305AC2922C29C2B00229670 /* AppointmentClinicCell.swift */,
+				5D01728422D4FD9C00716E8C /* AppointmentCell.swift */,
+				5D044B0C22E5E5FE005B4531 /* PatiantReservationCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		43D5B355229D5FB7009A04B6 = {
+			isa = PBXGroup;
+			children = (
+				43D5B360229D5FB7009A04B6 /* DoctorX */,
+				43D5B375229D5FB8009A04B6 /* DoctorXTests */,
+				43D5B380229D5FB8009A04B6 /* DoctorXUITests */,
+				43D5B35F229D5FB7009A04B6 /* Products */,
+				2A2FA6CE3AFA4C649F2E52E2 /* Pods */,
+				CFD05C2B801A82F52478FEAD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		43D5B35F229D5FB7009A04B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B35E229D5FB7009A04B6 /* DoctorX.app */,
+				43D5B372229D5FB8009A04B6 /* DoctorXTests.xctest */,
+				43D5B37D229D5FB8009A04B6 /* DoctorXUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43D5B360229D5FB7009A04B6 /* DoctorX */ = {
+			isa = PBXGroup;
+			children = (
+				43838AA722AD278E0088D191 /* model */,
+				43A8B448229EB9C900A3D3D5 /* view */,
+				43A8B445229E9F9600A3D3D5 /* control */,
+				43D5B361229D5FB7009A04B6 /* AppDelegate.swift */,
+				43D5B365229D5FB7009A04B6 /* Main.storyboard */,
+				43D5B368229D5FB8009A04B6 /* Assets.xcassets */,
+				43D5B36A229D5FB8009A04B6 /* LaunchScreen.storyboard */,
+				43D5B36D229D5FB8009A04B6 /* Info.plist */,
+				43838AA522AD25A60088D191 /* GoogleService-Info.plist */,
+				43A8B441229E8D6900A3D3D5 /* extension.swift */,
+				5D0C6ACE22D9EE28002F32BD /* Validation.swift */,
+			);
+			path = DoctorX;
+			sourceTree = "<group>";
+		};
+		43D5B375229D5FB8009A04B6 /* DoctorXTests */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B376229D5FB8009A04B6 /* DoctorXTests.swift */,
+				43D5B378229D5FB8009A04B6 /* Info.plist */,
+			);
+			path = DoctorXTests;
+			sourceTree = "<group>";
+		};
+		43D5B380229D5FB8009A04B6 /* DoctorXUITests */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B381229D5FB8009A04B6 /* DoctorXUITests.swift */,
+				43D5B383229D5FB8009A04B6 /* Info.plist */,
+			);
+			path = DoctorXUITests;
+			sourceTree = "<group>";
+		};
+		5D01728C22D592A000716E8C /* Doctor */ = {
+			isa = PBXGroup;
+			children = (
+				5D01728D22D592BD00716E8C /* AddNurse.swift */,
+				5D01728F22D5A31300716E8C /* NurseList.swift */,
+				5D0C6ACC22D9D447002F32BD /* editNurseData.swift */,
+				5D835BED22E4C50F0012B9CE /* AddReservationType.swift */,
+				5D044B0622E5B89D005B4531 /* ReservationTypeList.swift */,
+				5D044B0A22E5D534005B4531 /* EditReservationType.swift */,
+				5D935420230827420015850E /* homeDoctor.swift */,
+			);
+			path = Doctor;
+			sourceTree = "<group>";
+		};
+		5D01729122D5A38100716E8C /* Doctor */ = {
+			isa = PBXGroup;
+			children = (
+				5D01729222D5A39E00716E8C /* nursecell.swift */,
+				5D044B0822E5B93B005B4531 /* ReservationTypeCell.swift */,
+			);
+			path = Doctor;
+			sourceTree = "<group>";
+		};
+		5DE768B322D2FB4B008ADDB9 /* ForNurse */ = {
+			isa = PBXGroup;
+			children = (
+				5DE768B422D2FBC0008ADDB9 /* NurseHome.swift */,
+				5D39E5E422DB303E002D60B1 /* NurseLogin.swift */,
+				5D3602FC22DC783400EE5BAB /* NurseHome2.swift */,
+				5D3602FE22DC7A8F00EE5BAB /* NurseMoreVC.swift */,
+				5D36030022DC885C00EE5BAB /* NurseReservationStep1.swift */,
+				5D36030222DC997300EE5BAB /* NurseReservationStep2.swift */,
+				5D36030622DCB98200EE5BAB /* NurseToDayReservation.swift */,
+				5D36034222DDC21C00EE5BAB /* NurseRequestsForReservation.swift */,
+			);
+			path = ForNurse;
+			sourceTree = "<group>";
+		};
+		5DE768B622D304C8008ADDB9 /* NurseView */ = {
+			isa = PBXGroup;
+			children = (
+				5DE768B922D3055E008ADDB9 /* NClinicCell.swift */,
+				5D3602F622DB422300EE5BAB /* MainForNurse.swift */,
+				5D36034422DDDA5E00EE5BAB /* NurseReservationRequest.swift */,
+				5D36034622DDF81700EE5BAB /* NurseConfirmedCell.swift */,
+				5D93541E230801B50015850E /* top5forNurse.swift */,
+			);
+			path = NurseView;
+			sourceTree = "<group>";
+		};
+		CFD05C2B801A82F52478FEAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E26EFCB12A49B199EF22C61 /* Pods_DoctorX.framework */,
+				EAC132912EF518C2D274D8D8 /* Pods_DoctorXTests.framework */,
+				3884483CE0FAD5B0FE2F08FF /* Pods_DoctorXUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43D5B35D229D5FB7009A04B6 /* DoctorX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43D5B386229D5FB8009A04B6 /* Build configuration list for PBXNativeTarget "DoctorX" */;
+			buildPhases = (
+				89D3AA6F389320F0AB8150DE /* [CP] Check Pods Manifest.lock */,
+				43D5B35A229D5FB7009A04B6 /* Sources */,
+				43D5B35B229D5FB7009A04B6 /* Frameworks */,
+				43D5B35C229D5FB7009A04B6 /* Resources */,
+				614EA2A2CF954E4B5EDEF3F7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoctorX;
+			productName = DoctorX;
+			productReference = 43D5B35E229D5FB7009A04B6 /* DoctorX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		43D5B371229D5FB8009A04B6 /* DoctorXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43D5B389229D5FB8009A04B6 /* Build configuration list for PBXNativeTarget "DoctorXTests" */;
+			buildPhases = (
+				4BD43E1554883B41024A79CF /* [CP] Check Pods Manifest.lock */,
+				43D5B36E229D5FB8009A04B6 /* Sources */,
+				43D5B36F229D5FB8009A04B6 /* Frameworks */,
+				43D5B370229D5FB8009A04B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43D5B374229D5FB8009A04B6 /* PBXTargetDependency */,
+			);
+			name = DoctorXTests;
+			productName = DoctorXTests;
+			productReference = 43D5B372229D5FB8009A04B6 /* DoctorXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		43D5B37C229D5FB8009A04B6 /* DoctorXUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43D5B38C229D5FB8009A04B6 /* Build configuration list for PBXNativeTarget "DoctorXUITests" */;
+			buildPhases = (
+				516C428BECAFD8F2BFBC0C61 /* [CP] Check Pods Manifest.lock */,
+				43D5B379229D5FB8009A04B6 /* Sources */,
+				43D5B37A229D5FB8009A04B6 /* Frameworks */,
+				43D5B37B229D5FB8009A04B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43D5B37F229D5FB8009A04B6 /* PBXTargetDependency */,
+			);
+			name = DoctorXUITests;
+			productName = DoctorXUITests;
+			productReference = 43D5B37D229D5FB8009A04B6 /* DoctorXUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43D5B356229D5FB7009A04B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Marwa;
+				TargetAttributes = {
+					43D5B35D229D5FB7009A04B6 = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+					};
+					43D5B371229D5FB8009A04B6 = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 43D5B35D229D5FB7009A04B6;
+					};
+					43D5B37C229D5FB8009A04B6 = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 43D5B35D229D5FB7009A04B6;
+					};
+				};
+			};
+			buildConfigurationList = 43D5B359229D5FB7009A04B6 /* Build configuration list for PBXProject "DoctorX" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 43D5B355229D5FB7009A04B6;
+			productRefGroup = 43D5B35F229D5FB7009A04B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43D5B35D229D5FB7009A04B6 /* DoctorX */,
+				43D5B371229D5FB8009A04B6 /* DoctorXTests */,
+				43D5B37C229D5FB8009A04B6 /* DoctorXUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43D5B35C229D5FB7009A04B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D5B36C229D5FB8009A04B6 /* LaunchScreen.storyboard in Resources */,
+				43838AA622AD25A60088D191 /* GoogleService-Info.plist in Resources */,
+				43D5B369229D5FB8009A04B6 /* Assets.xcassets in Resources */,
+				43D5B367229D5FB7009A04B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D5B370229D5FB8009A04B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D5B37B229D5FB8009A04B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BD43E1554883B41024A79CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoctorXTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		516C428BECAFD8F2BFBC0C61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoctorXUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		614EA2A2CF954E4B5EDEF3F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DoctorX/Pods-DoctorX-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/VACalendar/VACalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VACalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DoctorX/Pods-DoctorX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89D3AA6F389320F0AB8150DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoctorX-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43D5B35A229D5FB7009A04B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DE768B522D2FBC0008ADDB9 /* NurseHome.swift in Sources */,
+				43ABC5EA229F0F0B00710DCB /* changePass.swift in Sources */,
+				430CF79222C0CE5D00124A71 /* Clinic.swift in Sources */,
+				5D36030722DCB98200EE5BAB /* NurseToDayReservation.swift in Sources */,
+				5D044B0722E5B89D005B4531 /* ReservationTypeList.swift in Sources */,
+				5D36034522DDDA5E00EE5BAB /* NurseReservationRequest.swift in Sources */,
+				5D36030122DC885C00EE5BAB /* NurseReservationStep1.swift in Sources */,
+				5D3602FF22DC7A8F00EE5BAB /* NurseMoreVC.swift in Sources */,
+				43838AA022AD062D0088D191 /* ClinicCell.swift in Sources */,
+				430CF79622C0D8D800124A71 /* editClinic.swift in Sources */,
+				434B0A45229F288B007E52BB /* login.swift in Sources */,
+				430CF79022C0CE3F00124A71 /* AddClinic.swift in Sources */,
+				43A8B447229EA38D00A3D3D5 /* patientReg.swift in Sources */,
+				430BD3BA22C249A7007ABDA0 /* shift.swift in Sources */,
+				5D36030322DC997300EE5BAB /* NurseReservationStep2.swift in Sources */,
+				4380C5DE22AD911A0045D51A /* DocAppointment.swift in Sources */,
+				5D01728722D4FEBD00716E8C /* AppointmentsReservation.swift in Sources */,
+				43A8B440229E8B1800A3D3D5 /* bookAppointment.swift in Sources */,
+				430BD3B822C24868007ABDA0 /* Appointment.swift in Sources */,
+				5D39E5E522DB303E002D60B1 /* NurseLogin.swift in Sources */,
+				5D0C6ACF22D9EE28002F32BD /* Validation.swift in Sources */,
+				5D835BF022E5A8CB0012B9CE /* ReservationTypes.swift in Sources */,
+				5D3602FB22DB894D00EE5BAB /* NursesDB.swift in Sources */,
+				43ABC5EC229F12E700710DCB /* setting.swift in Sources */,
+				43838AA422AD19F70088D191 /* notifications.swift in Sources */,
+				43838AA222AD17F00088D191 /* notificationCell.swift in Sources */,
+				4380C5E022AD914A0045D51A /* docAppointmentCell.swift in Sources */,
+				430CF79422C0CE6D00124A71 /* ClinicDAOImp.swift in Sources */,
+				4380C5E422AD95430045D51A /* settingNurse.swift in Sources */,
+				430CF78E22C0C4A300124A71 /* EditProfile.swift in Sources */,
+				5D935421230827420015850E /* homeDoctor.swift in Sources */,
+				5D044B0D22E5E5FE005B4531 /* PatiantReservationCell.swift in Sources */,
+				430BD3BC22C24ACF007ABDA0 /* AppointmentDAO.swift in Sources */,
+				5D01729022D5A31300716E8C /* NurseList.swift in Sources */,
+				5D835BF222E5AB180012B9CE /* ReservationTypeDAO.swift in Sources */,
+				5D83C15322D2ECA200936711 /* PatiantData.swift in Sources */,
+				5D36034722DDF81700EE5BAB /* NurseConfirmedCell.swift in Sources */,
+				5D36034322DDC21C00EE5BAB /* NurseRequestsForReservation.swift in Sources */,
+				430D04DA22BFB5710049FB09 /* Registraion.swift in Sources */,
+				5D01729322D5A39E00716E8C /* nursecell.swift in Sources */,
+				43838AA922AD27A60088D191 /* User.swift in Sources */,
+				5D3602F722DB422300EE5BAB /* MainForNurse.swift in Sources */,
+				5DE768BA22D3055E008ADDB9 /* NClinicCell.swift in Sources */,
+				430D04DE22BFB95D0049FB09 /* UserDAOImp.swift in Sources */,
+				43A8B44A229EB9D900A3D3D5 /* timeCell.swift in Sources */,
+				5D01728B22D58FC000716E8C /* Nurse.swift in Sources */,
+				5D93541F230801B50015850E /* top5forNurse.swift in Sources */,
+				5D044B0922E5B93B005B4531 /* ReservationTypeCell.swift in Sources */,
+				5D3602FD22DC783400EE5BAB /* NurseHome2.swift in Sources */,
+				4305AC2A22C29C2B00229670 /* AppointmentClinicCell.swift in Sources */,
+				43D5B364229D5FB7009A04B6 /* ViewController.swift in Sources */,
+				4392C86C22C2609D0036D495 /* Clinics.swift in Sources */,
+				5D01728522D4FD9C00716E8C /* AppointmentCell.swift in Sources */,
+				5D044B0B22E5D534005B4531 /* EditReservationType.swift in Sources */,
+				4392C86E22C260D40036D495 /* clinicsCell.swift in Sources */,
+				43D5B362229D5FB7009A04B6 /* AppDelegate.swift in Sources */,
+				4305AC2822C29B1400229670 /* clinicAppointment.swift in Sources */,
+				43838A9E22ACF34C0088D191 /* home.swift in Sources */,
+				43A8B442229E8D6900A3D3D5 /* extension.swift in Sources */,
+				43A8B444229E9F9000A3D3D5 /* AppointmentType.swift in Sources */,
+				5D01728E22D592BD00716E8C /* AddNurse.swift in Sources */,
+				5D01728922D505E700716E8C /* patiantAppointment.swift in Sources */,
+				4380C5E622AD97840045D51A /* EditDeleteNurse.swift in Sources */,
+				5D0C6ACD22D9D447002F32BD /* editNurseData.swift in Sources */,
+				430BD3B622C21F7F007ABDA0 /* AddApointments.swift in Sources */,
+				5D01728322D4EF4800716E8C /* ReservationDAO.swift in Sources */,
+				4380C5E222AD94FE0045D51A /* settingDoc.swift in Sources */,
+				5D835BEE22E4C5100012B9CE /* AddReservationType.swift in Sources */,
+				4380C5E822AD98360045D51A /* EditDeleteCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D5B36E229D5FB8009A04B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D5B377229D5FB8009A04B6 /* DoctorXTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D5B379229D5FB8009A04B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D5B382229D5FB8009A04B6 /* DoctorXUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43D5B374229D5FB8009A04B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43D5B35D229D5FB7009A04B6 /* DoctorX */;
+			targetProxy = 43D5B373229D5FB8009A04B6 /* PBXContainerItemProxy */;
+		};
+		43D5B37F229D5FB8009A04B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43D5B35D229D5FB7009A04B6 /* DoctorX */;
+			targetProxy = 43D5B37E229D5FB8009A04B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		43D5B365229D5FB7009A04B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43D5B366229D5FB7009A04B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		43D5B36A229D5FB8009A04B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43D5B36B229D5FB8009A04B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43D5B384229D5FB8009A04B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		43D5B385229D5FB8009A04B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43D5B387229D5FB8009A04B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A72EB1287D615B2AC15B528 /* Pods-DoctorX.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DoctorX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = OrxtraProject.DoctorX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		43D5B388229D5FB8009A04B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E264D9364EB2A49351A3210 /* Pods-DoctorX.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DoctorX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = OrxtraProject.DoctorX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		43D5B38A229D5FB8009A04B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2C2BC9CCC39125E9DD3D089 /* Pods-DoctorXTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DoctorXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = OrxtraProject.DoctorXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoctorX.app/DoctorX";
+			};
+			name = Debug;
+		};
+		43D5B38B229D5FB8009A04B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01EC644CD9A40F6402C5007E /* Pods-DoctorXTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DoctorXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = OrxtraProject.DoctorXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoctorX.app/DoctorX";
+			};
+			name = Release;
+		};
+		43D5B38D229D5FB8009A04B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26482AFB3A0350A7DD825BF8 /* Pods-DoctorXUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DoctorXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = OrxtraProject.DoctorXUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DoctorX;
+			};
+			name = Debug;
+		};
+		43D5B38E229D5FB8009A04B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EB48D93091A105F487206DA /* Pods-DoctorXUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DoctorXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = OrxtraProject.DoctorXUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DoctorX;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43D5B359229D5FB7009A04B6 /* Build configuration list for PBXProject "DoctorX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D5B384229D5FB8009A04B6 /* Debug */,
+				43D5B385229D5FB8009A04B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43D5B386229D5FB8009A04B6 /* Build configuration list for PBXNativeTarget "DoctorX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D5B387229D5FB8009A04B6 /* Debug */,
+				43D5B388229D5FB8009A04B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43D5B389229D5FB8009A04B6 /* Build configuration list for PBXNativeTarget "DoctorXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D5B38A229D5FB8009A04B6 /* Debug */,
+				43D5B38B229D5FB8009A04B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43D5B38C229D5FB8009A04B6 /* Build configuration list for PBXNativeTarget "DoctorXUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D5B38D229D5FB8009A04B6 /* Debug */,
+				43D5B38E229D5FB8009A04B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43D5B356229D5FB7009A04B6 /* Project object */;
+}
