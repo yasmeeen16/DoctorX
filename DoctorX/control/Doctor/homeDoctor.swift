@@ -8,59 +8,38 @@
 
 import UIKit
 import Firebase
-import FirebaseDatabase
-class homeDoctor: UIViewController {
-
-    @IBOutlet weak var NumOfReservation: UILabel!
-    @IBOutlet weak var Money: UILabel!
-    @IBOutlet weak var viewNumOfREservation: UIView!
-    @IBOutlet weak var view4: UIView!
-    @IBOutlet weak var Top5Table: UITableView!
-    var ref: DatabaseReference!
-    var reservationRequests = [PatiantData]()
-    var typeName = ""
-    
+class homeDoctor: UIViewController,UITableViewDelegate, UITableViewDataSource{
+    var cilnicDAO:ClinicDAOImp!
+    var ref: DatabaseReference! = nil
+    var Spinner :UIView!
+    @IBOutlet weak var table: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let defaults = UserDefaults.standard
-        self.title = "\(defaults.object(forKey: "clinicname")!)"
         
-        print(defaults.object(forKey: "NurseId")!)
-        viewNumOfREservation.shadowView()
-        view4.shadowView()
-        // Do any additional setup after loading the view.
+        table.delegate = self
+        table.dataSource = self
+        Spinner = UIViewController.displaySpinner(onView: self.view)
+        self.ref = Database.database().reference()
+        cilnicDAO = ClinicDAOImp(databaseReference: ref)
+        cilnicDAO.allClinics(table: table, loader: Spinner)
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        var numOfRes = 0
-        var total = 0
-        ref = Database.database().reference()
-        self.ref.child("Reservation").queryOrdered(byChild: "confirmed").queryEqual(toValue: "1").observeSingleEvent(of: .value, with: { (snapshot) in
-            for child in snapshot.children {
-                let snap = child as! DataSnapshot
-                let dict = snap.value as! [String: String]
-                let reserveType = dict["reserveType"]!
-                let clinicId = dict["clinicId"]!
-                let entered = dict["entered"]!
-                
-                let defaults = UserDefaults.standard
-                if clinicId == "\(defaults.object(forKey: "clinicId")!)" && entered == "1"{
-                    
-                    numOfRes = numOfRes + 1
-                    self.NumOfReservation.text = "\(numOfRes)"
-                    self.ref.child("Reserve_Type").queryOrdered(byChild: "id").queryEqual(toValue: reserveType).observeSingleEvent(of: .value, with: { (snapshot) in
-                        for child in snapshot.children {
-                            print(child)
-                            let snap = child as! DataSnapshot
-                            let dict = snap.value as! [String: String]
-                            total = total + Int(dict["price"]!)!
-                            self.Money.text = "\(total) ريال"
-                        }
-                    })
-                }
-            }
-        })
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cilnicDAO.Clinics.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! doctorHomecell
+        cell.clinicName.text = cilnicDAO.Clinics[indexPath.row].name
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "clinicIncomeDoctor") as! clinicIncomeDoctor
+        nextViewController.clinicId = cilnicDAO.Clinics[indexPath.row].id
+        self.navigationController?.pushViewController(nextViewController, animated:
+            true)
+    }
 
 
 }
-}
+

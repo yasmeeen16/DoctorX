@@ -80,6 +80,8 @@
 		5D83C15322D2ECA200936711 /* PatiantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83C15222D2ECA200936711 /* PatiantData.swift */; };
 		5D93541F230801B50015850E /* top5forNurse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D93541E230801B50015850E /* top5forNurse.swift */; };
 		5D935421230827420015850E /* homeDoctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D935420230827420015850E /* homeDoctor.swift */; };
+		5D935423230830040015850E /* doctorHomecell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D935422230830040015850E /* doctorHomecell.swift */; };
+		5D935425230832B10015850E /* clinicIncomeDoctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D935424230832B10015850E /* clinicIncomeDoctor.swift */; };
 		5DE768B522D2FBC0008ADDB9 /* NurseHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE768B422D2FBC0008ADDB9 /* NurseHome.swift */; };
 		5DE768BA22D3055E008ADDB9 /* NClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE768B922D3055E008ADDB9 /* NClinicCell.swift */; };
 		BAB74653BFD507B22BCA5EC1 /* Pods_DoctorXUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3884483CE0FAD5B0FE2F08FF /* Pods_DoctorXUITests.framework */; };
@@ -189,6 +191,8 @@
 		5D83C15222D2ECA200936711 /* PatiantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatiantData.swift; sourceTree = "<group>"; };
 		5D93541E230801B50015850E /* top5forNurse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = top5forNurse.swift; sourceTree = "<group>"; };
 		5D935420230827420015850E /* homeDoctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeDoctor.swift; sourceTree = "<group>"; };
+		5D935422230830040015850E /* doctorHomecell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doctorHomecell.swift; sourceTree = "<group>"; };
+		5D935424230832B10015850E /* clinicIncomeDoctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clinicIncomeDoctor.swift; sourceTree = "<group>"; };
 		5DE768B422D2FBC0008ADDB9 /* NurseHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseHome.swift; sourceTree = "<group>"; };
 		5DE768B922D3055E008ADDB9 /* NClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NClinicCell.swift; sourceTree = "<group>"; };
 		7EB48D93091A105F487206DA /* Pods-DoctorXUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorXUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorXUITests/Pods-DoctorXUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -391,6 +395,7 @@
 				5D044B0622E5B89D005B4531 /* ReservationTypeList.swift */,
 				5D044B0A22E5D534005B4531 /* EditReservationType.swift */,
 				5D935420230827420015850E /* homeDoctor.swift */,
+				5D935424230832B10015850E /* clinicIncomeDoctor.swift */,
 			);
 			path = Doctor;
 			sourceTree = "<group>";
@@ -400,6 +405,7 @@
 			children = (
 				5D01729222D5A39E00716E8C /* nursecell.swift */,
 				5D044B0822E5B93B005B4531 /* ReservationTypeCell.swift */,
+				5D935422230830040015850E /* doctorHomecell.swift */,
 			);
 			path = Doctor;
 			sourceTree = "<group>";
@@ -691,6 +697,7 @@
 				5D835BF022E5A8CB0012B9CE /* ReservationTypes.swift in Sources */,
 				5D3602FB22DB894D00EE5BAB /* NursesDB.swift in Sources */,
 				43ABC5EC229F12E700710DCB /* setting.swift in Sources */,
+				5D935425230832B10015850E /* clinicIncomeDoctor.swift in Sources */,
 				43838AA422AD19F70088D191 /* notifications.swift in Sources */,
 				43838AA222AD17F00088D191 /* notificationCell.swift in Sources */,
 				4380C5E022AD914A0045D51A /* docAppointmentCell.swift in Sources */,
@@ -702,6 +709,7 @@
 				430BD3BC22C24ACF007ABDA0 /* AppointmentDAO.swift in Sources */,
 				5D01729022D5A31300716E8C /* NurseList.swift in Sources */,
 				5D835BF222E5AB180012B9CE /* ReservationTypeDAO.swift in Sources */,
+				5D935423230830040015850E /* doctorHomecell.swift in Sources */,
 				5D83C15322D2ECA200936711 /* PatiantData.swift in Sources */,
 				5D36034722DDF81700EE5BAB /* NurseConfirmedCell.swift in Sources */,
 				5D36034322DDC21C00EE5BAB /* NurseRequestsForReservation.swift in Sources */,
