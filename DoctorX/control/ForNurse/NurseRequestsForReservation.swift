@@ -82,14 +82,18 @@ class NurseRequestsForReservation: UIViewController, UITableViewDataSource,UITab
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.reservationRequests.count
         
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+        
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 108
+        return 203
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 203
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! NurseReservationRequest
@@ -109,5 +113,15 @@ class NurseRequestsForReservation: UIViewController, UITableViewDataSource,UITab
         }
         self.requestsTable.reloadData()
     }
-    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! NurseReservationRequest
+            let reserve = self.reservationRequests[section]
+            cell.configureCellEn(reservation: reserve)
+            
+            return cell
+            
+        }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 20
+    }
 }

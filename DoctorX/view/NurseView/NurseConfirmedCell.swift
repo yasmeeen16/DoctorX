@@ -13,6 +13,10 @@ import UIKit
 
 class NurseConfirmedCell: UITableViewCell {
 
+    @IBOutlet weak var reservationDate: UILabel!
+    @IBOutlet weak var patiantAddress: UILabel!
+    @IBOutlet weak var patiantPhone: UILabel!
+    @IBOutlet weak var patiantAge: UILabel!
     @IBOutlet weak var ReservationTime: UILabel!
     @IBOutlet weak var PatiantName: UILabel!
     @IBOutlet weak var ReservationType: UILabel!
@@ -30,24 +34,18 @@ class NurseConfirmedCell: UITableViewCell {
     }
     func configureCellEn(reservation: PatiantData) {
         
-        PatiantName.text = "Request from \(reservation.name!)"
-        ReservationTime.text = "at \(reservation.reserveTime!)  \(reservation.reserveDate!)"
+
+        PatiantName.text = reservation.name
+        ReservationTime.text = reservation.reserveTime!
         enterBtn.accessibilityIdentifier = reservation.id
         ReservationType.text = reservation.reserveType
-//        if (reservation.reserveType! == "1"){
-//            ReservationType.text = "normal Booking"
-//        }else if (reservation.reserveType! == "2"){
-//            ReservationType.text = "Quick booking"
-//
-//        }else if (reservation.reserveType! == "3"){
-//            ReservationType.text = "Re-revealed"
-//        }else if (reservation.reserveType! == "4"){
-//            ReservationType.text = "consultation"
-//        }else if (reservation.reserveType! == "5"){
-//            ReservationType.text = "Visit home"
-//
-//        }
-        
+        reservationDate.text = reservation.reserveDate!
+        patiantAddress.text = reservation.address
+        patiantPhone.text = reservation.phone
+        patiantAge.text = "\(reservation.age!) سنه"
     }
 
 }
+
+
+

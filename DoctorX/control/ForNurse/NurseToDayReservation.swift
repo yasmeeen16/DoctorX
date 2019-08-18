@@ -11,7 +11,7 @@ import Firebase
 import FirebaseDatabase
 
 class NurseToDayReservation: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
+   
 
     @IBOutlet weak var reservationTable: UITableView!
     var ref: DatabaseReference!
@@ -84,6 +84,7 @@ class NurseToDayReservation: UIViewController,UITableViewDelegate,UITableViewDat
                         }
                         let reserveRequest = PatiantData(id: id, name: name, address: address, age: age, gender: gender, clinicId: clinicId, phone: phone, lat: lat, long: long, price: price, status: status, reserveType: type, reserveDate: reserveDate, reserveTime: reserveTime, userKey: userKey, nurseId: nurseId, day: day, month: month, year: year, confirmed: confirmed, entered: entered)
                         self.reservationRequests.append(reserveRequest)
+                       
                         self.reservationTable.reloadData()
         
                     })
@@ -97,11 +98,12 @@ class NurseToDayReservation: UIViewController,UITableViewDelegate,UITableViewDat
         // Dispose of any resources that can be recreated.
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+          return self.reservationRequests.count
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.reservationRequests.count
-    }
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//         return self.reservationRequests.count
+//
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! NurseConfirmedCell
@@ -110,10 +112,12 @@ class NurseToDayReservation: UIViewController,UITableViewDelegate,UITableViewDat
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 83
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 180
+//    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 203
     }
-    
     @IBAction func EnterBtn(_ sender: Any) {
         let R_id = "\((sender as AnyObject).accessibilityIdentifier! ?? " ")"
         
@@ -130,5 +134,20 @@ class NurseToDayReservation: UIViewController,UITableViewDelegate,UITableViewDat
         self.present(secondViewController, animated: true, completion: nil)
         
     }
-    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 20
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! NurseConfirmedCell
+
+        let reserve = self.reservationRequests[section]
+        cell.configureCellEn(reservation: reserve)
+        
+        
+        return cell
+    }
 }
