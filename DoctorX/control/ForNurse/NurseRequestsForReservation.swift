@@ -124,4 +124,20 @@ class NurseRequestsForReservation: UIViewController, UITableViewDataSource,UITab
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 20
     }
+    
+    //delete
+    @IBAction func cancelAction(_ sender: Any) {
+        let R_id = "\((sender as AnyObject).accessibilityIdentifier! ?? " ")"
+        
+        self.ref.child("Reservation").child(R_id).removeValue()
+        
+        //let idToDelete = 10
+        if let index = reservationRequests.index(where: {$0.id == R_id}) {
+            reservationRequests.remove(at: index)
+        }
+        self.requestsTable.reloadData()
+        
+    }
+    
+
 }

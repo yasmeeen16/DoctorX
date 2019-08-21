@@ -53,7 +53,22 @@ class patientReg: UIViewController ,UITextFieldDelegate,UIPickerViewDelegate,UIP
     }
     
     @IBAction func next(_ sender: Any) {
-
+        if !DataFiled(self.name.text!){
+            showToast(message: "ادخل الاسم")
+        }
+        else if !DataFiled(self.phone.text!){
+            showToast(message: "ادخل رقم التليفون")
+        }
+        else if !self.phone.text!.isValidContact{
+            showToast(message: "رقم الهاتف غير صالح")
+        }
+        else if !DataFiled(self.age.text!){
+            showToast(message: "ادخل العمر")
+        }
+        else if !DataFiled(self.address.text!){
+            showToast(message: "ادخل العنوان")
+        }else{
+        
         let name = self.name.text
         let age = self.age.text
         let phone = self.phone.text
@@ -65,6 +80,7 @@ class patientReg: UIViewController ,UITextFieldDelegate,UIPickerViewDelegate,UIP
         nextViewController.reserveObject = reserveObj
         self.navigationController?.pushViewController(nextViewController, animated:
             true)
+        }
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -80,4 +96,33 @@ class patientReg: UIViewController ,UITextFieldDelegate,UIPickerViewDelegate,UIP
         self.selectedGender = gender[row]
     }
     
+    
+    //validation
+        //showing tost
+    public func showToast(message : String) {
+        
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 50))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = .center;
+        toastLabel.font = UIFont(name: "Montserrat-Light", size: 12.0)
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
+    }
+    func DataFiled(_ value:String)->Bool{
+        if ( value != "" ) {
+            return true
+        }
+        return false
+    }
+    
+
 }

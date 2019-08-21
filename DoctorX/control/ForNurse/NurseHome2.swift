@@ -33,6 +33,15 @@ class NurseHome2: UIViewController, UITableViewDelegate,UITableViewDataSource {
         super.viewWillAppear(true)
         var numOfRes = 0
         var total = 0
+        let date = Date()
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day ,.hour ,.minute], from: date)
+        
+        let year1 =  "\(components.year!)" //year of now
+        let month1 = "\(components.month!)" // month of now
+        let day1 = "\(components.day!)"
+        let hour1 = components.hour //hour of now
+        let minute1 = components.minute // minute of now
         ref = Database.database().reference()
         self.ref.child("Reservation").queryOrdered(byChild: "confirmed").queryEqual(toValue: "1").observeSingleEvent(of: .value, with: { (snapshot) in
             for child in snapshot.children {
@@ -41,9 +50,11 @@ class NurseHome2: UIViewController, UITableViewDelegate,UITableViewDataSource {
                 let reserveType = dict["reserveType"]!
                 let clinicId = dict["clinicId"]!
                 let entered = dict["entered"]!
-                
+                let day = dict["day"]
+                let month = dict ["month"]
+                let year = dict ["year"]
                 let defaults = UserDefaults.standard
-                if clinicId == "\(defaults.object(forKey: "clinicId")!)" && entered == "1"{
+                if clinicId == "\(defaults.object(forKey: "clinicId")!)" && entered == "1" && day == day1 && month == month1 && year == year1{
                     
                     numOfRes = numOfRes + 1
                     self.NumOfReservation.text = "\(numOfRes)"
@@ -90,7 +101,7 @@ class NurseHome2: UIViewController, UITableViewDelegate,UITableViewDataSource {
                 let entered = dict["entered"]!
                 var type = ""
                 let defaults = UserDefaults.standard
-                if clinicId == "\(defaults.object(forKey: "clinicId")!)" && entered == "1"{
+                if clinicId == "\(defaults.object(forKey: "clinicId")!)" && entered == "1" && day == day1 && month == month1 && year == year1{
                         
                         self.ref.child("Reserve_Type").queryOrdered(byChild: "id").queryEqual(toValue: reserveType).observeSingleEvent(of: .value, with: { (snapshot) in
                             for child in snapshot.children {

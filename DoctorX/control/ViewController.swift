@@ -109,7 +109,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
             calendarView.setup()
         }
         heightView.constant = (self.collect.collectionViewLayout.collectionViewContentSize.height) + 55
-         self.collectH.constant = self.collect.collectionViewLayout.collectionViewContentSize.height
+         //self.collectH.constant = self.collect.collectionViewLayout.collectionViewContentSize.height
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return bookDAO.appointCount
@@ -135,6 +135,17 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
             collect.allowsMultipleSelection = false
         print("\(cell.time.text! )")
         self.reserve?.reserveTime = "\(cell.time.text!)"
+        // save
+        reservationDAo.savepatiantData(patiant: reserve)
+        if self.reserve.nurseId == ""{
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "AppointmentsReservation") as! AppointmentsReservation
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "NurseToDayReservation") as! NurseToDayReservation
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        
     }
     @IBOutlet weak var monthHeaderView: VAMonthHeaderView! {
         didSet {

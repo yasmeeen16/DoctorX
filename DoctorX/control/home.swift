@@ -21,6 +21,8 @@ class home: UIViewController ,UICollectionViewDelegate,UICollectionViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         view1.shadowView()
+        aboutLb.isSelectable = false
+        aboutLb.isEditable = false
         let user_key = randomString()
         print(user_key)
         let defaults = UserDefaults.standard

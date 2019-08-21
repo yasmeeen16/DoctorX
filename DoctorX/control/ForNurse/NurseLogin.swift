@@ -61,8 +61,8 @@ class NurseLogin: UIViewController {
                         self.performSegue(withIdentifier: "mainSegueForNurse", sender: self)
                         
                     }else if type == "doctor"{
-                        //let defaults = UserDefaults.standard
-                        //defaults.setValue(dict["id"]!, forKey: "NurseId")
+                        let defaults = UserDefaults.standard
+                        defaults.setValue(dict["id"]!, forKey: "DoctorId")
                         //defaults.setValue(dict["clinicname"]!, forKey: "clinicname")
                         //defaults.setValue(dict["clinicId"]!, forKey: "clinicId")
                         // self.showToast(message: "Login success")

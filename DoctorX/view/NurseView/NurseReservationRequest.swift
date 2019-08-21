@@ -10,12 +10,9 @@ import UIKit
 
 class NurseReservationRequest: UITableViewCell {
 
-//    @IBOutlet weak var patiantName: UILabel!
-//    @IBOutlet weak var ReservationTime: UILabel!
-//    @IBOutlet weak var reservationType: UILabel!
    @IBOutlet weak var Acceptptn: UIButton!
-//
-//
+    @IBOutlet weak var cancelptn: UIButton!
+
     @IBOutlet weak var reservationDate: UILabel!
     @IBOutlet weak var patiantAddress: UILabel!
     @IBOutlet weak var patiantPhone: UILabel!
@@ -38,7 +35,8 @@ class NurseReservationRequest: UITableViewCell {
 //        patiantName.text = "Request from \(reservation.name!)"
 //        ReservationTime.text = "at \(reservation.reserveTime!)  \(reservation.reserveDate!)"
         Acceptptn.accessibilityIdentifier = reservation.id
-//
+        cancelptn.accessibilityIdentifier = reservation.id
+
 //        reservationType.text = reservation.reserveType
         PatiantName.text = reservation.name
         ReservationTime.text = reservation.reserveTime!

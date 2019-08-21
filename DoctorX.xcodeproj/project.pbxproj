@@ -84,6 +84,7 @@
 		5D935425230832B10015850E /* clinicIncomeDoctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D935424230832B10015850E /* clinicIncomeDoctor.swift */; };
 		5DE768B522D2FBC0008ADDB9 /* NurseHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE768B422D2FBC0008ADDB9 /* NurseHome.swift */; };
 		5DE768BA22D3055E008ADDB9 /* NClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE768B922D3055E008ADDB9 /* NClinicCell.swift */; };
+		5DEEF30C230AA00C00074E1B /* DoctorReservations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEEF30B230AA00C00074E1B /* DoctorReservations.swift */; };
 		BAB74653BFD507B22BCA5EC1 /* Pods_DoctorXUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3884483CE0FAD5B0FE2F08FF /* Pods_DoctorXUITests.framework */; };
 		C8A608373987F687B10F2271 /* Pods_DoctorX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E26EFCB12A49B199EF22C61 /* Pods_DoctorX.framework */; };
 		DFD45DAE01F0D243C2254DC7 /* Pods_DoctorXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC132912EF518C2D274D8D8 /* Pods_DoctorXTests.framework */; };
@@ -195,6 +196,7 @@
 		5D935424230832B10015850E /* clinicIncomeDoctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clinicIncomeDoctor.swift; sourceTree = "<group>"; };
 		5DE768B422D2FBC0008ADDB9 /* NurseHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseHome.swift; sourceTree = "<group>"; };
 		5DE768B922D3055E008ADDB9 /* NClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NClinicCell.swift; sourceTree = "<group>"; };
+		5DEEF30B230AA00C00074E1B /* DoctorReservations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorReservations.swift; sourceTree = "<group>"; };
 		7EB48D93091A105F487206DA /* Pods-DoctorXUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorXUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorXUITests/Pods-DoctorXUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9A72EB1287D615B2AC15B528 /* Pods-DoctorX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorX/Pods-DoctorX.debug.xcconfig"; sourceTree = "<group>"; };
 		E2C2BC9CCC39125E9DD3D089 /* Pods-DoctorXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorXTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorXTests/Pods-DoctorXTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 				5D044B0A22E5D534005B4531 /* EditReservationType.swift */,
 				5D935420230827420015850E /* homeDoctor.swift */,
 				5D935424230832B10015850E /* clinicIncomeDoctor.swift */,
+				5DEEF30B230AA00C00074E1B /* DoctorReservations.swift */,
 			);
 			path = Doctor;
 			sourceTree = "<group>";
@@ -724,6 +727,7 @@
 				5D93541F230801B50015850E /* top5forNurse.swift in Sources */,
 				5D044B0922E5B93B005B4531 /* ReservationTypeCell.swift in Sources */,
 				5D3602FD22DC783400EE5BAB /* NurseHome2.swift in Sources */,
+				5DEEF30C230AA00C00074E1B /* DoctorReservations.swift in Sources */,
 				4305AC2A22C29C2B00229670 /* AppointmentClinicCell.swift in Sources */,
 				43D5B364229D5FB7009A04B6 /* ViewController.swift in Sources */,
 				4392C86C22C2609D0036D495 /* Clinics.swift in Sources */,
