@@ -19,13 +19,15 @@ class EditReservationType: UIViewController ,UIPickerViewDelegate,UIPickerViewDa
     @IBOutlet weak var typename: UITextField!
     @IBOutlet weak var typePrice: UITextField!
     @IBOutlet weak var pickerview: UIPickerView!
-    
+    @IBOutlet weak var ActorDeactTextF: UITextField!
+    var picker = UIPickerView()
 
     var ref: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
-        pickerview.dataSource = self
-        pickerview.delegate = self
+        picker.dataSource = self
+        picker.delegate = self
+        self.ActorDeactTextF.inputView = picker
         ref = Database.database().reference()
         ref.child("Reserve_Type").child(self.typeId).observeSingleEvent(of: .value, with:
             { (snapshot) in
@@ -63,8 +65,10 @@ class EditReservationType: UIViewController ,UIPickerViewDelegate,UIPickerViewDa
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
          if ActiveOrDeact[row] == "Active"{
             self.selectedType = "1"
+            self.ActorDeactTextF.text = "active"
          }else if ActiveOrDeact[row] == "Deactive"{
             self.selectedType = "0"
+            self.ActorDeactTextF.text = "Deactive"
         }
         
     }

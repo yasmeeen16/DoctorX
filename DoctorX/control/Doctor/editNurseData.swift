@@ -21,6 +21,8 @@ class editNurseData: UIViewController ,UIPickerViewDelegate,UIPickerViewDataSour
     var email = ""
     var password = " "
     var phone = " "
+    @IBOutlet weak var clinicNameTextF: UITextField!
+    var picker = UIPickerView()
     @IBOutlet weak var nurseName: UITextField!
     @IBOutlet weak var nurseemail: UITextField!
     @IBOutlet weak var nursepassword: UITextField!
@@ -29,6 +31,9 @@ class editNurseData: UIViewController ,UIPickerViewDelegate,UIPickerViewDataSour
     var ref: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
+        picker.delegate = self
+        picker.dataSource = self
+        self.clinicNameTextF.inputView = picker
         print(self.nurseId)
         ref = Database.database().reference()
     ref.child("Nurses").child(self.nurseId).observeSingleEvent(of: .value, with:
@@ -47,6 +52,9 @@ class editNurseData: UIViewController ,UIPickerViewDelegate,UIPickerViewDataSour
                     if key == "phone"{
                         self.nursephone.text = value as? String
                     }
+                    if key == "clinicname"{
+                        self.clinicNameTextF.text = value as? String
+                    }
                     
                 }
             })
@@ -63,7 +71,8 @@ class editNurseData: UIViewController ,UIPickerViewDelegate,UIPickerViewDataSour
                 ad.id = key
                 self.Clinics.append(ad)
                 print(self.Clinics.count)
-                self.clinicsname.reloadAllComponents()
+                //self.clinicsname.reloadAllComponents()
+                self.picker.reloadAllComponents()
             }
             if self.Clinics.count == 0 {
                 print("no ads")
@@ -92,6 +101,8 @@ class editNurseData: UIViewController ,UIPickerViewDelegate,UIPickerViewDataSour
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.selectedClinicid = Clinics[row].id
         self.selectedclinicname = Clinics[row].name
+        self.clinicNameTextF.text = Clinics[row].name
+        
     }
     
     @IBAction func editNurseData(_ sender: Any) {

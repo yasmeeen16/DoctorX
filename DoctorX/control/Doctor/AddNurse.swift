@@ -11,20 +11,24 @@ import FirebaseAuth
 import FirebaseDatabase
 import Firebase
 class AddNurse: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
-
+    var picker = UIPickerView()
     var Clinics = [Clinic]()
     var selectedClinicid = ""
     var selectedclinicname = ""
+    @IBOutlet weak var clinicNameTextF: UITextField!
     @IBOutlet weak var nurseName: UITextField!
     @IBOutlet weak var nurseemail: UITextField!
     @IBOutlet weak var nursepassword: UITextField!
     @IBOutlet weak var nursephone: UITextField!
-    @IBOutlet weak var clinicsname: UIPickerView!
+    //@IBOutlet weak var clinicsname: UIPickerView!
     var nurse:Nurse!
     var ref: DatabaseReference!
     var nursesDB: NursesDB!
     override func viewDidLoad() {
         super.viewDidLoad()
+        picker.delegate = self
+        picker.dataSource = self
+        clinicNameTextF.inputView = picker
         ref = Database.database().reference()
         ref.child("Clinics").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
@@ -37,7 +41,8 @@ class AddNurse: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
                 let ad = Clinic.mapToUser(user: value as! [String : Any])
                 ad.id = key
                 self.Clinics.append(ad)
-                self.clinicsname.reloadAllComponents()
+                //self.clinicsname.reloadAllComponents()
+                self.picker.reloadAllComponents()
             }
             if self.Clinics.count == 0 {
                 print("no ads")
@@ -65,6 +70,7 @@ class AddNurse: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.selectedClinicid = Clinics[row].id
         self.selectedclinicname = Clinics[row].name
+        self.clinicNameTextF.text = Clinics[row].name
     }
     
     @IBAction func AddNurse(_ sender: Any) {

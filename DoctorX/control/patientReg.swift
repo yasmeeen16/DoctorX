@@ -2,7 +2,7 @@
 //  patientReg.swift
 //  DoctorX
 //
-//  Created by Marwa on 5/29/19.
+//  Created by yasmeen on 5/29/19.
 //  Copyright © 2019 Marwa. All rights reserved.
 //
 
@@ -10,7 +10,9 @@ import UIKit
 
 class patientReg: UIViewController ,UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource{
 
+    var picker = UIPickerView()
     
+    @IBOutlet weak var genderTextF: UITextField!
     @IBOutlet weak var pickgenderOutlet: UIPickerView!
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var name: UITextField!
@@ -23,6 +25,9 @@ class patientReg: UIViewController ,UITextFieldDelegate,UIPickerViewDelegate,UIP
     var clinic_id = " "
     override func viewDidLoad() {
         super.viewDidLoad()
+        picker.delegate = self
+        picker.dataSource = self
+        genderTextF.inputView = picker
         name.shadowView()
         phone.shadowView()
         viewbg.shadowView()
@@ -67,6 +72,8 @@ class patientReg: UIViewController ,UITextFieldDelegate,UIPickerViewDelegate,UIP
         }
         else if !DataFiled(self.address.text!){
             showToast(message: "ادخل العنوان")
+        }else if !DataFiled(self.genderTextF.text!){
+            showToast(message: "ادخل النوع")
         }else{
         
         let name = self.name.text
@@ -94,6 +101,7 @@ class patientReg: UIViewController ,UITextFieldDelegate,UIPickerViewDelegate,UIP
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.selectedGender = gender[row]
+        self.genderTextF.text = gender[row]
     }
     
     

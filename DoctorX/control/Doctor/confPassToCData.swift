@@ -1,29 +1,34 @@
+
+
+
+
+
+
 //
-//  NurseLogin.swift
+//  confPassToCData.swift
 //  DoctorX
 //
-//  Created by yasmeen on 7/14/19.
+//  Created by yasmeen on 8/21/19.
 //  Copyright © 2019 Marwa. All rights reserved.
 //
 
 import UIKit
 import Firebase
 import FirebaseDatabase
-
-class NurseLogin: UIViewController {
+class confPassToCData: UIViewController {
 
     @IBOutlet weak var Email: UITextField!
     @IBOutlet weak var password: UITextField!
     var ref : DatabaseReference!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-//        if UserDefaults.standard.string(forKey:"NurseId") != ""{
-//            print("Loged in  >>>>>>>>>>>>>>>")
-//             self.performSegue(withIdentifier: "mainSegueForNurse", sender: self)
-        }
-        // Do any additional setup after loading the view.
+        //        if UserDefaults.standard.string(forKey:"NurseId") != ""{
+        //            print("Loged in  >>>>>>>>>>>>>>>")
+        //             self.performSegue(withIdentifier: "mainSegueForNurse", sender: self)
+    }
+    // Do any additional setup after loading the view.
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -41,35 +46,31 @@ class NurseLogin: UIViewController {
             }else if !self.DataFiled(self.password.text!){
                 self.showToast(message: "Enter Password")
             }else{
-            let data = snapshot.value as? [String:Any]
-            for child in snapshot.children {
-                print(child)
-                let snap = child as! DataSnapshot
-                let dict = snap.value as! [String: String]
-                let mail = dict["Email"]!
-                let password = dict["password"]!
-                let type = dict["type"]
-                if mail == self.Email.text! && password == self.password.text!{
-                    successLogin = true
-                    if type == "nurse"
-                    {
-                        let defaults = UserDefaults.standard
-                        defaults.setValue(dict["id"]!, forKey: "NurseId")
-                        defaults.setValue(dict["clinicname"]!, forKey: "clinicname")
-                        defaults.setValue(dict["clinicId"]!, forKey: "clinicId")
-                       // self.showToast(message: "Login success")
-                        self.performSegue(withIdentifier: "mainSegueForNurse", sender: self)
+                let data = snapshot.value as? [String:Any]
+                for child in snapshot.children {
+                    print(child)
+                    let snap = child as! DataSnapshot
+                    let dict = snap.value as! [String: String]
+                    let mail = dict["Email"]!
+                    let password = dict["password"]!
+                    let type = dict["type"]
+                    let id = dict["id"]
+                    if mail == self.Email.text! && password == self.password.text! &&  type == "doctor"{
+                        successLogin = true
                         
-                    }else if type == "doctor"{
                         let defaults = UserDefaults.standard
                         defaults.setValue(dict["id"]!, forKey: "DoctorId")
                         //defaults.setValue(dict["clinicname"]!, forKey: "clinicname")
                         //defaults.setValue(dict["clinicId"]!, forKey: "clinicId")
                         // self.showToast(message: "Login success")
-                        self.performSegue(withIdentifier: "mainSegueForDoctor", sender: self)
+                        //                            self.performSegue(withIdentifier: "changePassword", sender: self)
+                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ChangeData") as! ChangeData
+                        nextViewController.doctorId = id!
+                        self.navigationController?.pushViewController(nextViewController, animated:
+                            true)
                     }
                 }
-            }
                 if successLogin == false{
                     self.showToast(message: "Encorrect Data")
                 }
@@ -117,10 +118,8 @@ class NurseLogin: UIViewController {
         return false
     }
     
-    @IBAction func back(_ sender: Any) {
-        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") as! TabBarMain
-        self.present(secondViewController, animated: true, completion: nil)
-        
-    }
     
 }
+
+
+

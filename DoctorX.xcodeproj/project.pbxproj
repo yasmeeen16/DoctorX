@@ -63,6 +63,10 @@
 		5D044B0D22E5E5FE005B4531 /* PatiantReservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D044B0C22E5E5FE005B4531 /* PatiantReservationCell.swift */; };
 		5D0C6ACD22D9D447002F32BD /* editNurseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C6ACC22D9D447002F32BD /* editNurseData.swift */; };
 		5D0C6ACF22D9EE28002F32BD /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C6ACE22D9EE28002F32BD /* Validation.swift */; };
+		5D10634C230DE563001B90F3 /* confPassToCData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D10634B230DE563001B90F3 /* confPassToCData.swift */; };
+		5D10634E23112BE8001B90F3 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D10634D23112BE8001B90F3 /* ChangePassword.swift */; };
+		5D10635223112CDD001B90F3 /* ChangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D10635123112CDD001B90F3 /* ChangeData.swift */; };
+		5D106354231165FE001B90F3 /* TabBarMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D106353231165FE001B90F3 /* TabBarMain.swift */; };
 		5D3602F722DB422300EE5BAB /* MainForNurse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3602F622DB422300EE5BAB /* MainForNurse.swift */; };
 		5D3602FB22DB894D00EE5BAB /* NursesDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3602FA22DB894D00EE5BAB /* NursesDB.swift */; };
 		5D3602FD22DC783400EE5BAB /* NurseHome2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3602FC22DC783400EE5BAB /* NurseHome2.swift */; };
@@ -82,6 +86,7 @@
 		5D935421230827420015850E /* homeDoctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D935420230827420015850E /* homeDoctor.swift */; };
 		5D935423230830040015850E /* doctorHomecell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D935422230830040015850E /* doctorHomecell.swift */; };
 		5D935425230832B10015850E /* clinicIncomeDoctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D935424230832B10015850E /* clinicIncomeDoctor.swift */; };
+		5DD9E4FE230DE2870093EE32 /* confirmDataToChPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD9E4FD230DE2860093EE32 /* confirmDataToChPass.swift */; };
 		5DE768B522D2FBC0008ADDB9 /* NurseHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE768B422D2FBC0008ADDB9 /* NurseHome.swift */; };
 		5DE768BA22D3055E008ADDB9 /* NClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE768B922D3055E008ADDB9 /* NClinicCell.swift */; };
 		5DEEF30C230AA00C00074E1B /* DoctorReservations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEEF30B230AA00C00074E1B /* DoctorReservations.swift */; };
@@ -175,6 +180,10 @@
 		5D044B0C22E5E5FE005B4531 /* PatiantReservationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatiantReservationCell.swift; sourceTree = "<group>"; };
 		5D0C6ACC22D9D447002F32BD /* editNurseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editNurseData.swift; sourceTree = "<group>"; };
 		5D0C6ACE22D9EE28002F32BD /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		5D10634B230DE563001B90F3 /* confPassToCData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confPassToCData.swift; sourceTree = "<group>"; };
+		5D10634D23112BE8001B90F3 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
+		5D10635123112CDD001B90F3 /* ChangeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeData.swift; sourceTree = "<group>"; };
+		5D106353231165FE001B90F3 /* TabBarMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMain.swift; sourceTree = "<group>"; };
 		5D3602F622DB422300EE5BAB /* MainForNurse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainForNurse.swift; sourceTree = "<group>"; };
 		5D3602FA22DB894D00EE5BAB /* NursesDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NursesDB.swift; sourceTree = "<group>"; };
 		5D3602FC22DC783400EE5BAB /* NurseHome2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseHome2.swift; sourceTree = "<group>"; };
@@ -194,6 +203,7 @@
 		5D935420230827420015850E /* homeDoctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeDoctor.swift; sourceTree = "<group>"; };
 		5D935422230830040015850E /* doctorHomecell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doctorHomecell.swift; sourceTree = "<group>"; };
 		5D935424230832B10015850E /* clinicIncomeDoctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clinicIncomeDoctor.swift; sourceTree = "<group>"; };
+		5DD9E4FD230DE2860093EE32 /* confirmDataToChPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmDataToChPass.swift; sourceTree = "<group>"; };
 		5DE768B422D2FBC0008ADDB9 /* NurseHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseHome.swift; sourceTree = "<group>"; };
 		5DE768B922D3055E008ADDB9 /* NClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NClinicCell.swift; sourceTree = "<group>"; };
 		5DEEF30B230AA00C00074E1B /* DoctorReservations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorReservations.swift; sourceTree = "<group>"; };
@@ -307,6 +317,7 @@
 				430BD3B522C21F7F007ABDA0 /* AddApointments.swift */,
 				4305AC2722C29B1400229670 /* clinicAppointment.swift */,
 				5D01728622D4FEBD00716E8C /* AppointmentsReservation.swift */,
+				5D106353231165FE001B90F3 /* TabBarMain.swift */,
 			);
 			path = control;
 			sourceTree = "<group>";
@@ -399,6 +410,10 @@
 				5D935420230827420015850E /* homeDoctor.swift */,
 				5D935424230832B10015850E /* clinicIncomeDoctor.swift */,
 				5DEEF30B230AA00C00074E1B /* DoctorReservations.swift */,
+				5DD9E4FD230DE2860093EE32 /* confirmDataToChPass.swift */,
+				5D10634B230DE563001B90F3 /* confPassToCData.swift */,
+				5D10634D23112BE8001B90F3 /* ChangePassword.swift */,
+				5D10635123112CDD001B90F3 /* ChangeData.swift */,
 			);
 			path = Doctor;
 			sourceTree = "<group>";
@@ -678,10 +693,12 @@
 			files = (
 				5DE768B522D2FBC0008ADDB9 /* NurseHome.swift in Sources */,
 				43ABC5EA229F0F0B00710DCB /* changePass.swift in Sources */,
+				5DD9E4FE230DE2870093EE32 /* confirmDataToChPass.swift in Sources */,
 				430CF79222C0CE5D00124A71 /* Clinic.swift in Sources */,
 				5D36030722DCB98200EE5BAB /* NurseToDayReservation.swift in Sources */,
 				5D044B0722E5B89D005B4531 /* ReservationTypeList.swift in Sources */,
 				5D36034522DDDA5E00EE5BAB /* NurseReservationRequest.swift in Sources */,
+				5D10634E23112BE8001B90F3 /* ChangePassword.swift in Sources */,
 				5D36030122DC885C00EE5BAB /* NurseReservationStep1.swift in Sources */,
 				5D3602FF22DC7A8F00EE5BAB /* NurseMoreVC.swift in Sources */,
 				43838AA022AD062D0088D191 /* ClinicCell.swift in Sources */,
@@ -709,7 +726,9 @@
 				430CF78E22C0C4A300124A71 /* EditProfile.swift in Sources */,
 				5D935421230827420015850E /* homeDoctor.swift in Sources */,
 				5D044B0D22E5E5FE005B4531 /* PatiantReservationCell.swift in Sources */,
+				5D10635223112CDD001B90F3 /* ChangeData.swift in Sources */,
 				430BD3BC22C24ACF007ABDA0 /* AppointmentDAO.swift in Sources */,
+				5D10634C230DE563001B90F3 /* confPassToCData.swift in Sources */,
 				5D01729022D5A31300716E8C /* NurseList.swift in Sources */,
 				5D835BF222E5AB180012B9CE /* ReservationTypeDAO.swift in Sources */,
 				5D935423230830040015850E /* doctorHomecell.swift in Sources */,
@@ -739,6 +758,7 @@
 				43838A9E22ACF34C0088D191 /* home.swift in Sources */,
 				43A8B442229E8D6900A3D3D5 /* extension.swift in Sources */,
 				43A8B444229E9F9000A3D3D5 /* AppointmentType.swift in Sources */,
+				5D106354231165FE001B90F3 /* TabBarMain.swift in Sources */,
 				5D01728E22D592BD00716E8C /* AddNurse.swift in Sources */,
 				5D01728922D505E700716E8C /* patiantAppointment.swift in Sources */,
 				4380C5E622AD97840045D51A /* EditDeleteNurse.swift in Sources */,

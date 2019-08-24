@@ -10,6 +10,9 @@ import UIKit
 
 class NurseReservationStep1: UIViewController ,UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource{
     
+    
+    @IBOutlet weak var genderTextF: UITextField!
+    var picker = UIPickerView()
     @IBOutlet weak var pickgenderOutlet: UIPickerView!
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var name: UITextField!
@@ -23,6 +26,9 @@ class NurseReservationStep1: UIViewController ,UITextFieldDelegate,UIPickerViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        picker.delegate = self
+        picker.dataSource = self
+        genderTextF.inputView = picker
         name.shadowView()
         phone.shadowView()
         viewbg.shadowView()
@@ -89,6 +95,7 @@ class NurseReservationStep1: UIViewController ,UITextFieldDelegate,UIPickerViewD
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.selectedGender = gender[row]
+        self.genderTextF.text = gender[row]
     }
     
     //validation

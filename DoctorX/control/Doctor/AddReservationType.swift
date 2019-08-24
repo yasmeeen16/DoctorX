@@ -9,7 +9,8 @@
 import UIKit
 import Firebase
 class AddReservationType: UIViewController , UIPickerViewDelegate,UIPickerViewDataSource {
-
+    var picker = UIPickerView()
+    @IBOutlet weak var ActiveOrDactTextF: UITextField!
     @IBOutlet weak var ReservationName: UITextField!
     @IBOutlet weak var ReservationPrice: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
@@ -20,10 +21,13 @@ class AddReservationType: UIViewController , UIPickerViewDelegate,UIPickerViewDa
     var ref: DatabaseReference! = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+        picker.delegate = self
+        picker.dataSource = self
+        self.ActiveOrDactTextF.inputView = picker
         self.ref = Database.database().reference()
         reservationTypeDAO = ReservationTypeDAO(databaseReference: ref)
-        pickerView.delegate = self
-        pickerView.dataSource = self
+        //pickerView.delegate = self
+        //pickerView.dataSource = self
         // Do any additional setup after loading the view.
     }
    
@@ -68,6 +72,7 @@ class AddReservationType: UIViewController , UIPickerViewDelegate,UIPickerViewDa
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.selected = ActiveOrDeact[row]
+        self.ActiveOrDactTextF.text = ActiveOrDeact[row]
     }
 
     
