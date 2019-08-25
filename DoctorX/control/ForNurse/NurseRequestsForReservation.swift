@@ -28,30 +28,97 @@ class NurseRequestsForReservation: UIViewController, UITableViewDataSource,UITab
             for child in snapshot.children {
                 print(child)
                 let snap = child as! DataSnapshot
-                let dict = snap.value as! [String: String]
-                let address = dict["address"]!
-                let age = dict["age"]!
-                let clinicId = dict["clinicId"]!
-                let confirmed = dict["confirmed"]!
-                let day = dict["day"]!
-                let gender = dict["gender"]!
-                let id = dict["id"]!
-                let lat = dict["lat"]!
-                let long = dict["long"]!
-                let month = dict["month"]!
-                let name = dict["name"]!
-                let nurseId = dict["day"]!
-                let phone = dict["phone"]!
-                let price = dict["price"]!
-                let reserveDate = dict["reserveDate"]!
-                let reserveTime = dict["reserveTime"]!
-                let reserveType = dict["reserveType"]!
-                let status = dict["status"]!
-                let userKey = dict["userKey"]!
-                let year = dict["year"]!
-                let entered = dict["entered"]!
-                let defaults = UserDefaults.standard
+                let data = snap.value as? [String:Any]
+                //let dict = snap.value as! [String: String]
+                var address = ""
+                var age = ""
+                var clinicId = ""
+                var confirmed = ""
+                var day = ""
+                var gender = ""
+                var id = ""
+                var lat = ""
+                var long = ""
+                var month = ""
+                var name = ""
+                var nurseId = ""
+                var phone = ""
+                var price = ""
+                var reserveDate = ""
+                var reserveTime = ""
+                var reserveType = ""
+                var status = ""
+                var userKey = ""
+                var year = ""
+                var entered = ""
                 var type = ""
+                for (key,value) in data! {
+                    if key == "address" {
+                        address = (value as? String)!
+                    }
+                    if key == "age"{
+                        age = (age as? String)!
+                    }
+                    if key == "clinicId"{
+                        clinicId = (value as? String)!
+                    }
+                    if key == "confirmed"{
+                        confirmed = (value as? String)!
+                    }
+                    if key == "entered"{
+                        entered = (value as? String)!
+                    }
+                    if key == "day"{
+                        day = (value as? String)!
+                    }
+                    if key == "month"{
+                        month = (value as? String)!
+                    }
+                    if key == "year"{
+                        year = (value as? String)!
+                    }
+                    if key == "id"{
+                        id = (value as? String)!
+                    }
+                    if key == "lat"{
+                        lat = (value as? String)!
+                    }
+                    if key == "long"{
+                        long = (value as? String)!
+                    }
+                    if key == "gender"{
+                        gender = (value as? String)!
+                    }
+                    if key == "name"{
+                        name = (value as? String)!
+                    }
+                    if key == "nurseId"{
+                        nurseId = (value as? String)!
+                    }
+                    if key == "price"{
+                        price = (value as? String)!
+                    }
+                    if key == "phone"{
+                        phone = (value as? String)!
+                    }
+                    if key == "reserveType"{
+                        reserveType = (value as? String)!
+                    }
+                    if key == "reserveDate"{
+                        reserveDate = (value as? String)!
+                    }
+                    if key == "reserveTime"{
+                        reserveTime = (value as? String)!
+                    }
+                    if key == "status"{
+                        status = (value as? String)!
+                    }
+                    if key == "userKey"{
+                        userKey = (value as? String)!
+                    }
+                }
+                let defaults = UserDefaults.standard
+                
                 if clinicId == "\(defaults.object(forKey: "clinicId")!)"{
                     
                     
@@ -60,12 +127,15 @@ class NurseRequestsForReservation: UIViewController, UITableViewDataSource,UITab
                         for child in snapshot.children {
                             print(child)
                             let snap = child as! DataSnapshot
-                            let dict = snap.value as! [String: String]
-                            type = dict["name"]!
-                            
-                            print("==============================")
-                            print(type)
-                  
+                            let data = snap.value as? [String:Any]
+                            //let dict = snap.value as! [String: String]
+                            for (key,value) in data! {
+                                if key == "name" {
+                                    type = (value as? String)!
+                                }
+                            }
+                                //type = dict["name"]!
+                        
                         let reserveRequest = PatiantData(id: id, name: name, address: address, age: age, gender: gender, clinicId: clinicId, phone: phone, lat: lat, long: long, price: price, status: status, reserveType: type, reserveDate: reserveDate, reserveTime: reserveTime, userKey: userKey, nurseId: nurseId, day: day, month: month, year: year, confirmed: confirmed, entered: entered)
                         self.reservationRequests.append(reserveRequest)
                             self.requestsTable.reloadData()

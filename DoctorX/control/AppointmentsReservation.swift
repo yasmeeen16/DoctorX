@@ -51,12 +51,40 @@ class AppointmentsReservation: UIViewController, UITableViewDelegate ,UITableVie
             for child in snapshot.children {
                 print(child)
                 let snap = child as! DataSnapshot
-                let dict = snap.value as! [String: String]
-                let clinicId = dict["clinicId"]!
-                let reserveDate = dict["reserveDate"]!
-                let reserveTime = dict["reserveTime"]!
-                let entered = dict["entered"]
-                let name = dict["name"]
+//                let dict = snap.value as! [String: String]
+//                let clinicId = dict["clinicId"]!
+//                let reserveDate = dict["reserveDate"]!
+//                let reserveTime = dict["reserveTime"]!
+//                let entered = dict["entered"]
+//                let name = dict["name"]
+                
+                let data = snap.value as? [String:Any]
+                var clinicId = ""
+                var reserveDate = ""
+                var reserveTime = ""
+                var entered = ""
+                var name = ""
+                var confirmed = ""
+                for (key,value) in data! {
+                    if key == "clinicId" {
+                        clinicId = (value as? String)!
+                    }
+                    if key == "reserveDate"{
+                        reserveDate = (value as? String)!
+                    }
+                    if key == "reserveTime"{
+                        reserveTime = (value as? String)!
+                    }
+                    if key == "entered"{
+                        entered = (value as? String)!
+                    }
+                    if key == "name"{
+                        name = (value as? String)!
+                    }
+                    if key == "confirmed"{
+                        confirmed = (value as? String)!
+                    }
+                }
                 self.ref.child("Clinics").queryOrdered(byChild: "id").queryEqual(toValue: clinicId).observeSingleEvent(of: .value, with: { (snapshot) in
                     // Get user value
                     let data = snapshot.value as? [String:Any]
@@ -68,7 +96,7 @@ class AppointmentsReservation: UIViewController, UITableViewDelegate ,UITableVie
                         let ad = Clinic.mapToUser(user: value as! [String : Any])
                         ad.id = key
                         let clinicName = ad.name
-                        let patient = PatiantData(id: clinicName!, name: name! , address: "", age: "", gender: "", clinicId: "", phone: "", lat: "", long: "", price: "", status: "", reserveType: "", reserveDate: reserveDate, reserveTime: reserveTime, userKey: "", nurseId: "", day: "", month: "", year: "", confirmed: "", entered: entered!)
+                        let patient = PatiantData(id: clinicName!, name: name , address: "", age: "", gender: "", clinicId: "", phone: "", lat: "", long: "", price: "", status: "", reserveType: "", reserveDate: reserveDate, reserveTime: reserveTime, userKey: "", nurseId: "", day: "", month: "", year: "", confirmed: "", entered: entered)
                         self.reservationAppointment.append(patient)
                     }
                     
