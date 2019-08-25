@@ -48,13 +48,39 @@ class clinicIncomeDoctor: UIViewController {
         self.ref.child("Reservation").queryOrdered(byChild: "confirmed").queryEqual(toValue: "1").observeSingleEvent(of: .value, with: { (snapshot) in
             for child in snapshot.children {
                 let snap = child as! DataSnapshot
-                let dict = snap.value as! [String: String]
-                let reserveType = dict["reserveType"]!
-                let clinicId = dict["clinicId"]!
-                let entered = dict["entered"]!
-                let day = dict["day"]!
-                let month = dict["month"]!
-                let year = dict["year"]!
+                let data = snap.value as! [String: Any]
+                var reserveType = ""
+                var clinicId = ""
+                var entered = ""
+                var day = ""
+                var month = ""
+                var year = ""
+                for (key,value) in data {
+                    if key == "reserveType" {
+                        reserveType = (value as? String)!
+                    }
+                    if key == "clinicId" {
+                        clinicId = (value as? String)!
+                    }
+                    if key == "entered" {
+                        entered = (value as? String)!
+                    }
+                    if key == "day" {
+                        day = (value as? String)!
+                    }
+                    if key == "month" {
+                        month = (value as? String)!
+                    }
+                    if key == "year" {
+                        year = (value as? String)!
+                    }
+                }
+//                let reserveType = dict["reserveType"]!
+//                let clinicId = dict["clinicId"]!
+//                let entered = dict["entered"]!
+//                let day = dict["day"]!
+//                let month = dict["month"]!
+//                let year = dict["year"]!
                 let defaults = UserDefaults.standard
                 if clinicId == self.clinicId && entered == "1" && day == day1{
                     
@@ -64,9 +90,14 @@ class clinicIncomeDoctor: UIViewController {
                         for child in snapshot.children {
                             print(child)
                             let snap = child as! DataSnapshot
-                            let dict = snap.value as! [String: String]
-                             totalofDay = totalofDay + Int(dict["price"]!)!
-                            self.incomeDay.text = "\(totalofDay) ريال"
+                            let dict = snap.value as! [String: Any]
+                            for (key,value) in dict {
+                                if key == "price" {
+                                    totalofDay = totalofDay + Int((value as? String)!)!
+                                    self.incomeDay.text = "\(totalofDay) ريال"
+                                }
+                            }
+                            
                         }
                     })
                 }
@@ -78,9 +109,14 @@ class clinicIncomeDoctor: UIViewController {
                         for child in snapshot.children {
                             print(child)
                             let snap = child as! DataSnapshot
-                            let dict = snap.value as! [String: String]
-                            totalOfMonth = totalOfMonth + Int(dict["price"]!)!
-                            self.incomeMonth.text = "\(totalOfMonth) ريال"
+                            let dict = snap.value as! [String: Any]
+                            for (key,value) in dict {
+                                if key == "price" {
+                                    totalOfMonth = totalOfMonth + Int((value as? String)!)!
+                                    self.incomeMonth.text = "\(totalOfMonth) ريال"
+                                }
+                            }
+                            
                         }
                     })
                 }
@@ -92,9 +128,13 @@ class clinicIncomeDoctor: UIViewController {
                         for child in snapshot.children {
                             print(child)
                             let snap = child as! DataSnapshot
-                            let dict = snap.value as! [String: String]
-                            taotalOfYear = taotalOfYear + Int(dict["price"]!)!
-                            self.incomeyear.text = "\(taotalOfYear) ريال"
+                            let dict = snap.value as! [String: Any]
+                            for (key,value) in dict {
+                                if key == "price" {
+                                    taotalOfYear = taotalOfYear + Int((value as! String))!
+                                    self.incomeyear.text = "\(taotalOfYear) ريال"
+                                }
+                            }
                         }
                     })
                 }

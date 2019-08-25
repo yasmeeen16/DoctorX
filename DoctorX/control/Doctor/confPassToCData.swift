@@ -50,11 +50,29 @@ class confPassToCData: UIViewController {
                 for child in snapshot.children {
                     print(child)
                     let snap = child as! DataSnapshot
-                    let dict = snap.value as! [String: String]
-                    let mail = dict["Email"]!
-                    let password = dict["password"]!
-                    let type = dict["type"]
-                    let id = dict["id"]
+                    let dict = snap.value as! [String: Any]
+                    var mail = ""
+                    var password = ""
+                    var type = ""
+                    var id = ""
+                    for (key,value) in dict {
+                        if key == "Email" {
+                            mail = value as! String
+                        }
+                        if key == "password" {
+                            password = value as! String
+                        }
+                        if key == "type" {
+                            type = value as! String
+                        }
+                        if key == "id" {
+                            id = value as! String
+                        }
+                    }
+//                    let mail = dict["Email"]!
+//                    let password = dict["password"]!
+//                    let type = dict["type"]
+//                    let id = dict["id"]
                     if mail == self.Email.text! && password == self.password.text! &&  type == "doctor"{
                         successLogin = true
                         
@@ -66,7 +84,7 @@ class confPassToCData: UIViewController {
                         //                            self.performSegue(withIdentifier: "changePassword", sender: self)
                         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ChangeData") as! ChangeData
-                        nextViewController.doctorId = id!
+                        nextViewController.doctorId = id
                         self.navigationController?.pushViewController(nextViewController, animated:
                             true)
                     }
